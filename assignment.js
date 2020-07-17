@@ -1,8 +1,9 @@
 let askFeet=500;
+let floormake=45;
 let friendArray=["faiza","shoshe","samantha","charu","nus","dola","ri"];
 console.log("After converting into mile: "+feetToMile(askFeet));
-console.log(woodCalculator(5,4,0));
-console.log(brickCalculator(80));
+console.log("total quantity of wood "+woodCalculator(30,20,10));
+console.log(brickCalculator(floormake));
 console.log("tinyname not tiny friend is "+tinyFriend(friendArray));
 
 function feetToMile(feet){
@@ -14,18 +15,20 @@ function woodCalculator(chair,table,khat){
     let amountChair=1*chair;
     let amounttable=3*table;
     let amountkhat=5*khat;
-    return "you will be able to make "+amountChair+" chair "+amounttable+" table "+amountkhat+" khat";
+    let totalwood=amountChair+amounttable+amountkhat;
+    return totalwood;
    }
 
    function brickCalculator(floor){
+       const brick=1000;
     if(floor<=10){
-   return floor*15;
+   return floor*15*brick;
     }
     else if(floor<=20){
-        return ((floor-10)*12)+(10*15);
+        return (((floor-10)*12)+(10*15))*brick;
     }
     else{
-        return ((floor-20)*10)+(10*15)+(10*12);
+        return (((floor-20)*10)+(10*15)+(10*12))*brick;
     }
    }
    
